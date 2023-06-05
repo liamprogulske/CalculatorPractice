@@ -86,7 +86,7 @@ function floor() {
 function power2() {
     var num = parseFloat(document.frmCalc.txtNumber.value);
         if (!(isNaN(num))) {
-            prevCalc = num ** 2;
+            prevCalc = num;
             document.frmCalc.txtNumber.value = "";
             calc = "Power2";
         }
@@ -156,6 +156,12 @@ function calculate() {
         if (!(isNaN(num))) {
             if (calc == "Power"){
                 var total = prevCalc ** num;
+                document.frmCalc.txtNumber.value = total;
+            }}
+    var num = parseFloat(document.frmCalc.txtNumber.value);
+        if (!(isNaN(num))) {
+            if (calc == "Power2"){
+                var total = Math.pow(num, 2);
                 document.frmCalc.txtNumber.value = total;
             }}
     var num = parseFloat(document.frmCalc.txtNumber.value);
